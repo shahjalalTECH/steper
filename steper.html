@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/slick/slick.css">
+    <link rel="stylesheet" href="assets/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+
+    <!-- ----------------------------------------------
+        #Steps
+    --------------------------------------------------- -->
+
+    <ul class="bob_steps">
+        <li class="bob_step_one selected bob-step-list bob-step-list-1" data-step="one">1</li>
+        <hr>
+        <li class="bob_step_two bob-step-list bob-step-list-2" data-step="two">2</li>
+        <hr>
+        <li class="bob_step_three bob-step-list bob-step-list-3" data-step="three">3</li>
+    </ul>
+
+    <!-- ----------------------------------------------
+            #Step one
+            #Accordion 
+    --------------------------------------------------- -->
+    <div id="step_one" class="bob-custom_accordion_parent">
+        <div class="bob-accordions-wrapper">
+            <div class="bob-accordion">
+                <div class="bob-accordion-header">
+                    <h4>General</h4>
+                    <i class="fa-solid bob-accordion-icon fa-angle-up"></i>
+                </div>
+                <div class="bob-accordion-body">
+                    <div class="bob_form_parent">
+                        <div class="bob_form_input">
+                            <label for="">Ad Title</label>
+                            <input type="text" placeholder="Type title...">
+                        </div>
+
+                        <div class="bob_form_input">
+                            <label for="">Phone</label>
+                            <input type="text" placeholder="Type phone...">
+                        </div>
+
+                        <div class="bob_form_input">
+                            <label for="">Description</label>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Type description..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bob-accordion">
+                <div class="bob-accordion-header">
+                    <h4>Details</h4>
+                    <i class="fa-solid bob-accordion-icon fa-angle-up"></i>
+                </div>
+                <div class="bob-accordion-body">
+                    <div class="bob_form_parent">
+                        <div class="bob_form_input">
+                            <label for="">Choose Brand</label>
+                            <select name="" id="">
+                                <option value="" disabled selected>Not selected</option>
+                                <option value="A.Lange and Sohne">A.Lange and Sohne</option>
+                                <option value="Audemars Piguet">Audemars Piguet</option>
+                                <option value="Baltic">Baltic</option>
+                                <option value="Bell and Ross">Bell and Ross</option>
+                            </select>
+                        </div>
+
+                        <div class="bob_form_input">
+                            <label for="">Choose Model</label>
+                            <select name="" id="">
+                                <option value="" disabled selected>Not selected</option>
+                                <option value="brand-new">Brand New</option>
+                                <option value="pre-owned-like-new">Pre-Owned - Like New</option>
+                                <option value="pre-owned-little-wear-and-tear">Pre-Owned - Little wear and tear
+                                </option>
+                                <option value="pre-owned-obvious-sign-of-use">Pre-Owned - Obvious sign of use
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="bob_form_input">
+                            <label for="">Choose Year</label>
+                            <select name="" id="">
+                                <option value="" disabled selected>Not selected</option>
+                                <option value="1950">1950</option>
+                                <option value="1951">1951</option>
+                                <option value="1952">1952</option>
+                                <option value="1953">1953</option>
+                                <option value="1954">1954</option>
+                                <option value="1955">1955</option>
+                                <option value="1956">1956</option>
+                                <option value="1957">1957</option>
+                                <option value="1958">1958</option>
+                                <option value="1959">1959</option>
+                                <option value="1960">1960</option>
+                            </select>
+                        </div>
+
+                        <div class="bob_form_input">
+                            <label for="">Choose Condition</label>
+                            <select name="" id="">
+                                <option value="" disabled selected>Not selected</option>
+                                <option value="brand-new">Brand New</option>
+                                <option value="pre-owned-like-new">Pre-Owned - Like New</option>
+                                <option value="pre-owned-little-wear-and-tear">Pre-Owned - Little wear and tear
+                                </option>
+                                <option value="pre-owned-obvious-sign-of-use">Pre-Owned - Obvious sign of use
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="bob_form_input">
+                            <label for="">Choose Box & Paper</label>
+                            <select name="" id="">
+                                <option value="" disabled selected>Not selected</option>
+                                <option value="box-papers">Box & Papers</option>
+                                <option value="box-only">Box Only</option>
+                                <option value="no-box-no-papers">No Box No Papers</option>
+                                <option value="papers-only">Papers Only</option>
+                            </select>
+                        </div>
+
+                        <div class="bob_form_input">
+                            <label for="">Choose Gender</label>
+                            <select name="" id="">
+                                <option value="" disabled selected>Not selected</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Unisex">Unisex</option>
+                            </select>
+                        </div>
+
+                        <div class="bob_form_input">
+                            <label for="">Choose Case Diameter</label>
+                            <select name="" id="">
+                                <option value="" disabled selected>Not selected</option>
+                                <option value="24mm">24mm</option>
+                                <option value="26mm">26mm</option>
+                                <option value="28mm">28mm</option>
+                                <option value="30mm">30mm</option>
+                                <option value="32mm">32mm</option>
+                                <option value="34mm">34mm</option>
+                                <option value="36mm">36mm</option>
+                                <option value="38mm">38mm</option>
+                                <option value="40mm">40mm</option>
+                                <option value="42mm">42mm</option>
+                                <option value="44mm">44mm</option>
+                            </select>
+                        </div>
+
+                        <div class="bob_form_input">
+                            <label for="">Choose Case Material</label>
+                            <select name="" id="">
+                                <option value="" disabled selected>Not selected</option>
+                                <option value="bronze">Bronze</option>
+                                <option value="ceramic">Ceramic</option>
+                                <option value="dlc">DLC</option>
+                                <option value="gold">Gold</option>
+                                <option value="others">Others</option>
+                                <option value="platinum">Platinum</option>
+                                <option value="rose-gold">Rose gold</option>
+                                <option value="stainless-steel">Stainless Steel</option>
+                                <option value="titanium">Titanium</option>
+                                <option value="white-gold">White Gold</option>
+                            </select>
+                        </div>
+
+                        <div class="bob_form_input">
+                            <label for="">Choose Strap Material</label>
+                            <select name="" id="">
+                                <option value="" disabled selected>Not selected</option>
+                                <option value="bronze">Bronze</option>
+                                <option value="ceramic">Ceramic</option>
+                                <option value="dlc">DLC</option>
+                                <option value="gold">Gold</option>
+                                <option value="others">Others</option>
+                                <option value="platinum">Platinum</option>
+                                <option value="rose-gold">Rose gold</option>
+                                <option value="stainless-steel">Stainless Steel</option>
+                                <option value="titanium">Titanium</option>
+                                <option value="white-gold">White Gold</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bob-accordion">
+                <div class="bob-accordion-header">
+                    <h4>Condition</h4>
+                    <i class="fa-solid bob-accordion-icon fa-angle-up"></i>
+                </div>
+                <div class="bob-accordion-body">
+                    <div class="bob_form_parent">
+                        <div class="bob_form_input">
+                            <label for="">Select Price Types</label>
+                            <select>
+                                <option value="fixed">Fixed</option>
+                                <option value="negotiable">Negotiable</option>
+                                <option value="price_on_call">Price On Call</option>
+                            </select>
+                        </div>
+                        <div class="bob_form_input">
+                            <label for="">Price</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="bob_continue_btn bob_continue" type="button" data-btn="1">Continue</button>
+    </div>
+
+    <!-- ----------------------------------------------
+            #Step two
+            #Form 
+    --------------------------------------------------- -->
+
+    <div id="step_two" class="bob_form_parent bob_form_parent_width">
+        <h4>Address</h4>
+        <div class="bob_form_input">
+            <label for="">Country</label>
+            <select>
+                <option value="">Your Country</option>
+                <option value="united-arab-emirates">United Arab Emirates</option>
+                <option value="kingdom-of-saudi-arabia">Kingdom of Saudi Arabia</option>
+                <option value="oman">Oman</option>
+                <option value="qatar">Qatar</option>
+                <option value="other">Other</option>
+                <option value="kuwait">Kuwait</option>
+                <option value="bahrain">Bahrain</option>
+            </select>
+        </div>
+
+        <div class="bob_form_input">
+            <label for="">City</label>
+            <select>
+                <option value="">Your City</option>
+                <option value="abu-dhabi">Abu Dhabi</option>
+                <option value="ajman">Ajman</option>
+                <option value="dubai">Dubai</option>
+                <option value="fujairah">Fujairah</option>
+                <option value="ras-al-khaimah">Ras Al Khaimah</option>
+                <option value="sharjah">Sharjah</option>
+                <option value="umm-al-quwain">Umm Al Quwain</option>
+            </select>
+        </div>
+
+        <button type="button" class="bob_continue" data-btn="2">Continue</button>
+    </div>
+
+    <!-- ----------------------------------------------
+            #Step three
+            #Image Upload
+    --------------------------------------------------- -->
+
+    <div id="step_three" class="bob_form_parent bob_form_parent_width">
+        <h4>Media</h4>
+        <p>Images <span>(allowed formats JPG, PNG and maximum 2mb)</span></p>
+        <div class="upload__box">
+            <div class="upload__img-wrap">
+                <div class="upload__btn-box">
+                    <label class="upload__btn">
+                        <i class="fa-solid fa-camera"></i>
+                        <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit">Continue</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="assets/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

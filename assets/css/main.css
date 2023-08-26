@@ -1,0 +1,1567 @@
+/* --------------------------------------------------------
+# Common CSS 
+-----------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --main-font: 'Open Sans', sans-serif;
+    --main-color: #818181;
+    --font-color: #141414;
+}
+
+body {
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--font-color);
+    line-height: 22px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--font-color);
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+/* ----------------------------------------------------
+    #Step one
+    # Steper Accordion
+ ------------------------------------------------------ */
+
+.bob-custom_accordion_parent {
+    width: 640px;
+    max-width: calc(100% - 80px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.bob-accordion {
+    border: 1px solid var(--font-color);
+    border-top: unset;
+    cursor: pointer;
+    transition: width 0.25s ease-in-out, max-height 0.4s ease-in-out, margin 0.4s ease-in-out, min-height 0.4s ease-in-out;
+}
+
+.bob-accordion:first-child {
+    border-top: 1px solid var(--font-color);
+}
+
+.bob-accordion-header {
+    cursor: pointer;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.bob-accordion-header h4 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.bob-accordion-body {
+    transition: all 0.35s ease-in-out;
+    /* max-height: 0; */
+    /* overflow: hidden; */
+    padding: 15px;
+    display: none;
+}
+
+.bob-accordion-icon {
+    transition: transform 0.4s ease-in-out;
+}
+
+.bob-accordion.bob-active .bob-accordion-icon {
+    transform: rotate(-180deg);
+}
+
+.bob-accordion.bob-active {
+    width: calc(100% + 50px);
+    position: relative;
+    left: -25px;
+}
+
+.bob-accordion.bob-active {
+    border-top: 1px solid var(--font-color);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: all 0.35s ease-in-out;
+
+}
+
+.bob-accordion.bob-active+.bob-accordion {
+    border-top: 1px solid var(--font-color);
+}
+
+.bob-accordion.bob-active .bob-accordion-body {
+    padding: 1rem 1.5rem;
+    padding-top: unset;
+    display: block;
+    transition: all 1s linear;
+}
+
+/* ----------------------------------------------------
+    #Step Two
+    #Form
+ ------------------------------------------------------ */
+
+.bob_form_parent {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bob_form_parent textarea,
+.bob_form_parent select,
+.bob_form_parent button,
+.bob_form_parent input {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    border: 1px solid #e1e1e1;
+    color: var(--font-color);
+}
+
+.bob_form_parent textarea {
+    height: 150px;
+}
+
+.bob_form_parent .bob_form_input {
+    margin-bottom: 15px;
+}
+
+.bob_form_parent button {
+    background: var(--main-color);
+    border: unset;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 3px;
+}
+
+.bob_form_input p {
+    color: #b2b2b2;
+    margin-top: 3px;
+}
+
+.bob_form_input label {
+    font-size: 12px;
+}
+
+.bob_form_parent_width h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--font-color);
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------
+    #Step Three
+    #Image Upload
+ ------------------------------------------------------ */
+
+.upload__inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.upload__btn {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 145px;
+    min-height: 100%;
+    padding: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px dashed var(--font-color);
+    background-color: #fff;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.upload__btn i {
+    color: var(--main-color) !important;
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.upload__btn:hover {
+    background-color: unset;
+    color: #4045ba;
+    transition: all 0.3s ease;
+}
+
+.upload__btn-box {
+    margin-bottom: 10px;
+    width: calc(50% - 10px);
+}
+
+.upload__img-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.upload__img-box {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.upload__img-close {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #8181814f;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    line-height: 35px;
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.upload__img-close:after {
+    content: "✖";
+    font-size: 14px;
+    color: var(--font-color);
+}
+
+.img-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.bob_form_parent_width {
+    width: 320px !important;
+    max-width: calc(100% - 30px) !important;
+    margin-top: 100px;
+}
+
+.bob_form_parent_width p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.bob_steps {
+    display: flex;
+    width: 250px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bob_steps li {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DADADA;
+    color: #fff;
+}
+
+.bob_steps li.selected {
+    background: #000;
+}
+
+.bob_steps hr {
+    display: block;
+    width: 80px;
+    border-top: 1px solid #DADADA;
+    height: 1px;
+}
+
+.bob_continue_btn {
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 50px;
+    border-radius: 5px;
+    background: var(--main-color);
+    color: #fff;
+    margin-top: 30px;
+    border: unset;
+    outline: unset;
+}
+
+#step_two,
+#step_three {
+    display: none;
+}
+
+/* -----------------------------------------
+#Front Page
+#The Leading Marketplace for Luxury 
+--------------------------------------------*/
+
+:root {
+    --indigo-color: #03181c;
+}
+
+#the-leading-marketplace-for-luxury {
+    padding: 80px 0;
+}
+
+@media screen and (max-width: 576px) {
+    #the-leading-marketplace-for-luxury {
+        padding: 40px 0;
+    }
+}
+
+.leading-marketplace-for-luxury-box {
+    padding: 20px;
+    border: 1px solid #cdd4d8 !important;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.leading-marketplace-for-luxury-box .marketplace-for-luxury-box-img {
+    width: 90px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leading-marketplace-for-luxury-box .marketplace-for-luxury-box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.marketplace-for-luxury-box-content h4 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--main-font);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.marketplace-for-luxury-box-content p {
+    text-align: center;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* -----------------------------------------
+#Front Page
+#Chrono Buyer Protection
+--------------------------------------------*/
+
+#chrono-buyer-protection {
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 576px) {
+    #chrono-buyer-protection {
+        padding-bottom: 40px;
+    }
+}
+
+#chrono-buyer-protection .chrono-buyer-protection_parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#chrono-buyer-protection .chrono-buyer-protection_content,
+#chrono-buyer-protection .chrono-buyer-protection_img {
+    flex-basis: 50%;
+    height: auto;
+}
+
+#chrono-buyer-protection .chrono-buyer-protection_content {
+    background: var(--indigo-color);
+    padding: 50px;
+}
+
+#chrono-buyer-protection .chrono-buyer-protection_content h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+#chrono-buyer-protection .chrono-buyer-protection_content ul li {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: var(--main-font);
+    margin-bottom: 17px;
+    position: relative;
+    padding-left: 32px;
+}
+
+#chrono-buyer-protection .chrono-buyer-protection_content ul li::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    color: #23a15c;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+}
+
+#chrono-buyer-protection .chrono-buyer-protection_content a {
+    display: block;
+    width: max-content;
+    color: rgba(255, 255, 255, .9);
+    padding: 10px 50px;
+    border: 1px solid rgba(255, 255, 255, .9);
+    border-radius: 6px;
+    background: transparent;
+    font-size: 14px;
+    text-align: center;
+    transition: .5s;
+    margin-top: 40px;
+}
+
+#chrono-buyer-protection .chrono-buyer-protection_content a:hover {
+    text-decoration: underline;
+}
+
+#chrono-buyer-protection .chrono-buyer-protection_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 992px) {
+
+    #chrono-buyer-protection .chrono-buyer-protection_content,
+    #chrono-buyer-protection .chrono-buyer-protection_img {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #chrono-buyer-protection .chrono-buyer-protection_content a {
+        width: unset;
+        padding: 8px 12px;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    #chrono-buyer-protection .chrono-buyer-protection_content {
+        padding: 20px;
+    }
+
+    #chrono-buyer-protection .chrono-buyer-protection_content h4 {
+        font-size: 20px;
+    }
+
+    #chrono-buyer-protection .chrono-buyer-protection_content ul li {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+/* -----------------------------------------
+#Front Page
+#Chrono Buyer Protection
+--------------------------------------------*/
+
+#explore-chrono {
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 576px) {
+    #explore-chrono {
+        padding-bottom: 40px;
+    }
+}
+
+.explore-chrono-parent {
+    display: block;
+    cursor: pointer;
+}
+
+.explore-chrono-parent .explore-chrono-img-parent {
+    width: 100%;
+    height: 220px;
+}
+
+.explore-chrono-parent .explore-chrono-img-parent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.explore-chrono-parent h4 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#the-leading-marketplace-for-luxury h2,
+#popular-brands h2,
+#our-latest-videos h2,
+#chrono-magazine h2,
+#new-on-instagram h2,
+#our-most-popular-models h2,
+#explore-chrono h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 576px) {
+
+    #the-leading-marketplace-for-luxury h2,
+    #popular-brands h2,
+    #our-latest-videos h2,
+    #chrono-magazine h2,
+    #new-on-instagram h2,
+    #our-most-popular-models h2,
+    #explore-chrono h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+/* -----------------------------------------
+#Front Page
+#Our Most Popular Models
+--------------------------------------------*/
+
+#our-most-popular-models {
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 576px) {
+    #our-most-popular-models {
+        padding-bottom: 30px;
+    }
+}
+
+.our-most-popular-models-parent {
+    display: block;
+    background: #f2f4f5;
+    border-radius: 8px;
+    padding: 20px;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.our-most-popular-models-parent .our-most-popular-models-img {
+    width: 100%;
+    transition: .5s;
+    height: 300px;
+}
+
+.our-most-popular-models-parent:hover .our-most-popular-models-img {
+    transform: scale(1.1);
+}
+
+.our-most-popular-models-parent .our-most-popular-models-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.our-most-popular-models-parent .our-most-popular-models-contain h4 {
+    font-weight: 600;
+    font-size: 14px;
+    font-family: var(--main-font);
+    margin-top: 5px;
+}
+
+.bob_all_view {
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 50px;
+    border: 1px solid #03181c;
+    color: #03181c;
+    border-radius: 5px;
+    text-align: center;
+    transition: .5s;
+    margin-top: 20px;
+}
+
+.bob_all_view:hover {
+    text-decoration: underline;
+}
+
+/* -----------------------------------------
+#Front Page
+#Chrono Magazine
+--------------------------------------------*/
+
+#chrono-magazine {
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 576px) {
+    #chrono-magazine {
+        padding-bottom: 30px;
+    }
+}
+
+.chrono-magazine-parent {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.chrono-magazine-parent .chrono-magazine-img-parent {
+    width: 100%;
+    height: 300px;
+}
+
+.chrono-magazine-parent .chrono-magazine-img-parent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 576px) {
+    .chrono-magazine-parent .chrono-magazine-img-parent {
+        height: 200px;
+    }
+}
+
+.chrono-magazine-parent .chrono-magazine-content {
+    margin-top: 11px;
+}
+
+.chrono-magazine-parent .chrono-magazine-content h4 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.chrono-magazine-parent .chrono-magazine-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.chrono-magazine-content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.chrono-magazine-content-footer .chrono-magazine-content-footer-user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.chrono-magazine-content-footer-user .chrono-magazine-content-footer-user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.chrono-magazine-content-footer-user .chrono-magazine-content-footer-user-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chrono-magazine-content-footer-user span {
+    text-decoration: underline;
+    transition: .5s;
+}
+
+.chrono-magazine-content-footer-user:hover span {
+    color: #c39052;
+}
+
+.chrono-magazine-content-footer-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.chrono-magazine-content-footer-icon i {
+    margin-right: 10px;
+    transition: .5s;
+    font-size: 18px;
+}
+
+.chrono-magazine-content-footer-icon:hover i {
+    color: #c39052;
+}
+
+/* -----------------------------------------
+#Front Page
+#New on Instagram
+--------------------------------------------*/
+
+#new-on-instagram {
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 576px) {
+    #new-on-instagram {
+        padding-bottom: 30px;
+    }
+}
+
+#new-on-instagram .new-on-instagram-box {
+    width: 100%;
+    display: block;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    transition: .5s;
+}
+
+#new-on-instagram .new-on-instagram-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.new-on-instagram-box-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .5s;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.new-on-instagram-box-content p {
+    color: #fff;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#new-on-instagram .new-on-instagram-box:hover .new-on-instagram-box-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* -----------------------------------------
+#Front Page
+#Our Latest Videos
+--------------------------------------------*/
+
+#our-latest-videos {
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 576px) {
+    #our-latest-videos {
+        padding-bottom: 30px;
+    }
+}
+
+.our-latest-videos-parent .our-latest-videos-content h4 {
+    font-size: 17px;
+    font-weight: 600;
+    font-family: var(--main-font);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.our-latest-videos-parent .our-latest-videos-content span {
+    margin-top: 15px;
+    display: block;
+}
+
+.our-latest-videos-parent .our-latest-videos-content {
+    margin-top: 10px;
+}
+
+/* -----------------------------------------
+#Front Page
+#Four Content Box
+--------------------------------------------*/
+
+#four_content_box {
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 576px) {
+    #four_content_box {
+        padding-bottom: 30px;
+    }
+}
+
+.four_content_box_parent {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #cdd4d8;
+    padding: 30px 15px;
+    border-radius: 5px;
+}
+
+.four_content_box_parent h4 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--main-font);
+    margin-bottom: 20px;
+}
+
+.four_content_box_parent p {
+    margin-bottom: 10px;
+}
+
+/* -----------------------------------------
+#Front Page
+#Popular brands
+--------------------------------------------*/
+
+#popular-brands {
+    padding-top: 80px;
+}
+
+@media screen and (max-width: 576px) {
+    #popular-brands {
+        padding-top: 50px;
+    }
+}
+
+.popular-brands-slick-parent .popular-brands-slick-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-brands-slick-parent .popular-brands-slick-child a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 17px 25px;
+    background: #f2f4f5;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.popular-brands-slick-parent .popular-brands-slick-child a:first-child {
+    margin-bottom: 10px;
+}
+
+.popular-brands-slick-parent .popular-brands-slick-padding {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* -----------------------------------------
+#Front Page
+#Slick Slider
+--------------------------------------------*/
+
+.slick-dots {
+    bottom: -40px !important;
+}
+
+.bob_all_view_margin {
+    margin-top: 50px;
+}
+
+.slick-dots li button {
+    height: 3px !important;
+    width: 25px !important;
+    opacity: 1 !important;
+    border-radius: 2px !important;
+    background-color: #cdd4d8 !important;
+    transition: all .1s ease-in-out !important;
+    padding: unset !important;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #c39052 !important;
+    width: 50px !important;
+}
+
+.slick-dots li {
+    width: max-content !important;
+}
+
+.slick-dots li button:before {
+    display: none !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .slick-dots {
+        display: none !important;
+    }
+}
+
+.slick-next,
+.slick-prev {
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #fff !important;
+    z-index: 50;
+    background-image: url("../images/arrow_left_back_icon.png") !important;
+    background-position: center !important;
+    background-size: 20px !important;
+    background-repeat: no-repeat !important;
+    border-radius: 5px !important;
+    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 10%) !important;
+}
+
+.slick-prev {
+    left: 0 !important;
+}
+
+.slick-next {
+    background-image: url("../images/arrow_right_icon.png") !important;
+    right: 0 !important;
+}
+
+
+.slick-prev:before,
+.slick-next:before {
+    display: none !important;
+}
+
+#happy_customers .slick-next,
+#happy_customers .slick-prev {
+    width: 30px !important;
+    height: 30px !important;
+    background-color: transparent !important;
+    box-shadow: unset !important;
+    background-image: url("../images/arrow-white\ \(2\).png") !important;
+}
+
+#happy_customers .slick-next {
+    background-image: url("../images/arrow-white\ \(1\).png") !important;
+    right: -20px !important;
+}
+
+#happy_customers .slick-prev {
+    left: -20px !important;
+}
+
+/* -----------------------------------------
+#Front Page
+#happy customers 
+--------------------------------------------*/
+
+#happy_customers {
+    background: #03181c;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+}
+
+@media screen and (max-width: 576px) {
+    #happy_customers {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+#happy_customers .happy_customers_top_content h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#happy_customers .happy_customers_top_content h4 {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+#happy_customers .happy_customers_top_content p {
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+}
+
+#happy_customers .happy_customers_top_content {
+    margin-bottom: 30px;
+}
+
+#happy_customers .happy_customers_box_slick_child {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.happy_customers_box_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.happy_customers_box_header .happy_customers_box_header_star {
+    display: flex;
+}
+
+.happy_customers_box_header .happy_customers_box_header_star i {
+    width: 25px;
+    margin-right: 2px;
+    height: 25px;
+    background: #00b679;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.happy_customers_box_header span {
+    color: #81949c;
+}
+
+.happy_customers_box_body {
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+}
+
+.happy_customers_box_body::after,
+.happy_customers_box_body::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f10d";
+    display: inline-block;
+    font-weight: 900;
+    position: absolute;
+    font-size: 20px;
+    left: 0;
+    top: 0;
+    color: #c39052;
+}
+
+.happy_customers_box_body::after {
+    content: "\f10e";
+    left: unset;
+    top: unset;
+    right: 0;
+    bottom: 0;
+    
+}
+
+.happy_customers_box_body p {
+    font-style: italic;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.happy_customers_box_footer {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.happy_customers_box_footer .happy_customers_box_footer_user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    text-transform: uppercase;
+    border-radius: 50%;
+    background:#f2f4f5e9;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.happy_customers_box_footer .happy_customers_box_footer_user_name_title h4 {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.happy_customers_box_footer .happy_customers_box_footer_user_name_title p {
+    color: #81949c;
+    font-size: 14px;
+}
+
+.happy_customers_box_slick_padding {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    .happy_customers_box_slick_padding {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #happy_customers .slick-next {
+        right: -10px !important;
+    }
+    
+    #happy_customers .slick-prev {
+        left: -10px !important;
+    }
+
+    #happy_customers .happy_customers_top_content h2 {
+        font-size: 20px;
+    }
+
+    #happy_customers .happy_customers_top_content h4 {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    #happy_customers .happy_customers_top_content p {
+        font-size: 14px;
+        margin-top: 3px;
+    }
+}
+
+/* -----------------------------------------
+#Front Page
+#Footer
+--------------------------------------------*/
+
+footer {
+    background: #03181c;
+    padding: 30px 0;
+}
+
+footer .footer_content h4 {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+footer .footer_content ul li a {
+    color: #fff;
+    transition: .5s;
+}
+
+footer .footer_content ul li a:hover {
+    color:#c39052;
+}
+
+footer .footer_content ul li {
+    margin-bottom: 10px;
+}
+
+footer .footer_content .footer_phone {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer_content_time_logo_img {
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.footer_content_time_logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer_content_time_logo li {
+    margin-right: 30px;
+}
+
+.footer_content_time_logo li a {
+    display: flex;
+    align-items: center;
+}
+
+.footer_all_countries li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: .5s;
+}
+
+.footer_all_countries li a:hover {
+    color: #c39052;
+}
+
+.footer_all_countries li {
+    margin-bottom: 10px;
+}
+
+.footer_all_countries li a img {
+    margin-right: 10px;
+    width: 21px;
+    height: 15px;
+    object-fit: contain;
+}
+
+.footer_privacy_policy {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_privacy_policy li a {
+    color: #81949c;
+    transition: .5s;
+}
+
+.footer_privacy_policy li a:hover {
+    color: #c39052;
+}
+
+.footer_privacy_policy li {
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.footer_social_icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer_social_icon li a i {
+    color: #81949c;
+    font-size: 18px;
+}
+
+.footer_social_icon li {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .footer_social_icon {
+        justify-content: flex-start;
+    }
+
+    .footer_social_icon li {
+        margin-left: unset;
+        margin-right: 20px;
+    } 
+}
+
+/* -----------------------------------------
+#Front Page
+#Chrono Newsletter
+--------------------------------------------*/
+
+#chrono_newsletter {
+    background: #f2f4f5;
+    padding: 40px 0;
+}
+
+#chrono_newsletter .chrono-newsletter h4 {
+    font-size: 17px;
+    font-weight: 700;
+    font-family: var(--main-font);
+    text-align: center;
+}
+
+#chrono_newsletter .chrono-newsletter a {
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 50px;
+    background: #03181c;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: .5s;
+}
+
+#chrono_newsletter .chrono-newsletter a:hover {
+    text-decoration: underline;
+}
+
+/* -----------------------------------------
+#Front Page
+#Chrono Newsletter
+--------------------------------------------*/
+
+.topbar_top {
+    background: #f2f4f5;
+    padding: 10px 0;
+}
+
+.topbar_top_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topbar_top_content a {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    .topbar_top_content {
+        flex-direction: column;
+    }
+}
+
+.topbar_bottom_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar_bottom_content .topbar_bottom_content_logo {
+    display: block;
+    width: 180px;
+    height: 80px;
+}
+
+.topbar_bottom_content .topbar_bottom_content_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.topbar_bottom_content .topbar_bottom_content_user {
+    display: flex;
+    align-items: center;
+    transition: .5s;
+}
+
+.topbar_bottom_content .topbar_bottom_content_user i {
+    margin-right: 10px;
+}
+
+.topbar_bottom_content .topbar_bottom_content_user:hover {
+    color: #c39052;
+}
+
+@media screen and (max-width: 576px) {
+    .topbar_bottom_content {
+        flex-direction: column;
+    }
+    
+    .topbar_bottom_content .topbar_bottom_content_logo {
+        height: 70px;
+    }
+}
+
+/* -----------------------------------------
+#Front Page
+#Header
+--------------------------------------------*/
+
+header .navbar-nav .nav-item .nav-link {
+    font-size: 17px;
+    color: var(--font-color);
+}
+
+header .navbar-nav .nav-item {
+    margin-right: 40px;
+}
+
+header .dropdown-toggle::after {
+    border: unset !important;
+}
+
+header .dropdown-menu {
+    width: 100% !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 175px !important;
+    border: unset !important;
+    border-radius: unset !important;
+    box-shadow: rgba(33, 35, 38, 0.5) 0px 10px 10px -10px !important;
+    padding: 30px 0 !important;
+}
+
+header .dropdown {
+    position: unset !important;
+}
+
+header .navbar {
+    position: unset;
+}
+
+header .container-fluid {
+    padding: unset !important;
+}
+
+header .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: unset !important;
+    padding-left: unset !important;
+    transition: .5s;
+}
+
+header .navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #c39052 !important;
+}
+
+header .dropdown .dropdown-menu h4 {
+    font-size: 17px;
+    font-weight: 700;
+    font-family: var(--main-font);
+    margin-bottom: 20px;
+}
+
+header .dropdown .dropdown-menu ul li a {
+    font-size: 14px;
+    transition: .5s;
+}
+
+header .dropdown .dropdown-menu ul li a:hover {
+    color: #c39052 !important;
+}
+
+header .dropdown .dropdown-menu ul li {
+    margin-bottom: 10px;
+}
+
+header .nav-link.dropdown-toggle.show {
+    position: relative;
+}
+
+header .nav-link.dropdown-toggle.show::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background:#c39052;
+    left: 0;
+    bottom: -7px;
+    margin-left: unset !important;
+}
+
+header .dropdown-toggle i {
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 992px) {
+    header .navbar-nav {
+        padding-top: 23px;
+    }
+
+    header .navbar-light .navbar-toggler {
+        outline: unset !important;
+        box-shadow: unset !important;
+    }
+
+    header .dropdown {
+        position: relative !important;
+    }
+
+    header .dropdown-menu {
+        top: 40px !important;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px !important;
+        border-radius: 5px !important;
+    }
+}
+
+/* -----------------------------------------
+#Front Page
+#Header
+--------------------------------------------*/
